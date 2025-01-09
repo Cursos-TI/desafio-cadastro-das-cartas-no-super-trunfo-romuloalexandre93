@@ -27,7 +27,7 @@ int main() {
     printf("Quantos pontos turísticos? ");
     scanf("%d", &pontoTur);
 
-    prinf("\nDados da cidade:\n");
+    printf("\nDados da cidade:\n");
     printf("Nome: %s\n", nomeCidade);
     printf("Código: %d\n", codigo);
     printf("População: %d habitantes\n", populacao);
