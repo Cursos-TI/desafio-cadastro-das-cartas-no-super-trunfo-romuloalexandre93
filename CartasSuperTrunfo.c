@@ -7,41 +7,57 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    int populacao, codigo, pontoTur;
-    float pib, area;
-    char nomeCidade[50];
+    char estado;
+    char codigoCarta[5], nomeCidade[20];
+    int populacao, pontoTur;
+    float area, pib;
 
-    printf("Cadastro das cidades:\n");
+    /*Carta 1:
+    Estado: A
+    Código: A01
+    Nome da Cidade: São Paulo
+    População: 12325000
+    Área: 1521.11 km²
+    PIB: 699.28 bilhões de reais
+    Número de Pontos Turísticos: 50
+
+    e
+
+    Carta 2:
+    Estado: B
+    Código: B02
+    Nome da Cidade: Rio de Janeiro
+    População: 6748000
+    Área: 1200.25 km²
+    PIB: 300.50 bilhões de reais
+    Número de Pontos Turísticos: 30
+    */
+
+    //Inserção dos dados.
+    printf("Digite o estado: ");
+    scanf("%c", &estado);
+    printf("Digite o codigo: ");
+    scanf("%s", codigoCarta);
     printf("Digite o nome da cidade: ");
-    scanf("%s", &nomeCidade);
-    printf("Digite o código da cidade: ");
-    scanf("%d", &codigo);
-    printf("Digite a população da cidade: ");
+    scanf("%s", nomeCidade);
+    printf("Digite a populacao da cidade: ");
     scanf("%d", &populacao);
-    printf("Digite a área territorial: ");
+    printf("Digite a area [em km2]: ");
     scanf("%f", &area);
-    printf("Digite o PIB da cidade: ");
+    printf("Digite o PIB local [em bilhoes]: ");
     scanf("%f", &pib);
-    printf("Quantos pontos turísticos? ");
+    printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontoTur);
 
-    printf("\nDados da cidade:\n");
-    printf("Nome: %s\n", nomeCidade);
-    printf("Código: %d\n", codigo);
-    printf("População: %d habitantes\n", populacao);
-    printf("Área territorial: %.2f km²\n", area);
-    printf("PIB da cidade: R$ %.2f\n", pib);
-    printf("Pontos turísticos: %d\n", pontoTur);
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //Apresentação dos dados selecionados.
+    printf("\n");
+    printf("Estado: %c\n", estado);
+    printf("Codigo: %s\n", codigoCarta);
+    printf("Nome da Cidade: %s\n", nomeCidade);
+    printf("Populacao: %d\n", populacao);
+    printf("Area: %.2f km2\n", area);
+    printf("PIB: R$ %.2f bi\n", pib);
+    printf("Numero de Pontos Turisticos: %d\n", pontoTur);
 
     return 0;
 }
